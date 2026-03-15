@@ -1158,7 +1158,14 @@ img { max-width: 100%; display: block; }
 .wa-text { font-size: 1rem; font-weight: 600; white-space: nowrap; }
 
 @media (max-width: 768px) {
-  .whatsapp-float { bottom: 20px; right: 20px; padding: 12px; border-radius: 50%; }
+  .whatsapp-float {
+    display: flex !important;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px;
+    border-radius: 50%;
+    z-index: 1001;
+  }
   .wa-text { display: none; }
   .wa-icon { width: 28px; height: 28px; }
 }
