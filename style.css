@@ -858,8 +858,8 @@ img { max-width: 100%; display: block; }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
 }
 
 .contact-card {
@@ -1070,7 +1070,10 @@ img { max-width: 100%; display: block; }
 @media (max-width: 900px) {
   .about-grid,
   .mavi-lira-grid,
-  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .contact-grid { grid-template-columns: 1fr !important; gap: 40px; }
+
+  .mavi-lira-grid { direction: ltr !important; }
+  .mavi-lira-content, .mavi-lira-visual { direction: ltr !important; }
 
   .hero-stats { position: relative; bottom: auto; right: auto; justify-content: flex-start; margin-top: 48px; }
 
@@ -1083,18 +1086,44 @@ img { max-width: 100%; display: block; }
 
   .nav-links { display: none; }
   .hamburger { display: flex; }
+
+  #hakkimizda { padding: 80px 0; }
+  #otomatlar  { padding: 80px 0; }
+  #mavi-lira  { padding: 80px 0; }
+  #iletisim   { padding: 80px 0 !important; }
+  #nasil-calisir { padding: 70px 0 !important; }
+  .section-padding { padding: 70px 0; }
 }
 
 @media (max-width: 600px) {
-  .hero-title { font-size: 2.5rem; }
+  .hero-title { font-size: 2.2rem; }
+  .section-title { font-size: 1.8rem; }
+
   .products-grid { grid-template-columns: 1fr; }
+  .contact-grid  { grid-template-columns: 1fr !important; }
+
   .footer-inner { flex-direction: column; text-align: center; }
-  .footer-links { justify-content: center; }
-  .phone-mockup { width: 240px; height: 380px; }
-  .contact-grid { grid-template-columns: 1fr; }
+  .footer-links { justify-content: center; flex-wrap: wrap; gap: 16px; }
+
   .cta-card { padding: 32px 20px; }
+
   .hero-actions { flex-direction: column; }
-  .hero-actions .btn-primary, .hero-actions .btn-secondary { justify-content: center; }
+  .hero-actions .btn-primary, .hero-actions .btn-secondary { justify-content: center; width: 100%; }
+
+  .hero-stats { gap: 12px; }
+  .stat-badge { padding: 16px 20px; }
+
+  .ml-features { gap: 10px; }
+
+  .partners-card { padding: 24px 16px; }
+
+  .badge-floating-container { flex-direction: column; gap: 12px; }
+
+  #iletisim .contact-card { padding: 24px 20px !important; }
+
+  .products-grid { gap: 16px; }
+
+  .btn-primary, .btn-secondary { padding: 14px 24px; font-size: 0.95rem; }
 }
 
 /* ─── SECTIONS LAYOUT CSS ─── */
